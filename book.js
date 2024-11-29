@@ -1,4 +1,6 @@
-const {Schema, default: mongoose} = require('mongoose')
+const mongoose = require('mongoose')
+
+const {Schema} = require('mongoose')
 
 const bookSchema = new Schema({
     title:String,
@@ -8,6 +10,6 @@ const bookSchema = new Schema({
     availableCopies:Number,
 })
 
-const book = mongoose.model('book',bookSchema)
+const Book = mongoose.model('book',bookSchema)
 
-module.exports = book;
+module.exports = Book;

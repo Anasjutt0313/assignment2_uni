@@ -1,4 +1,6 @@
-const {Schema, default: mongoose} = require('mongoose')
+const mongoose = require('mongoose')
+
+const {Schema} = require('mongoose')
 
 const memberSchema = new Schema({
     name:String,
@@ -8,6 +10,6 @@ const memberSchema = new Schema({
     contactNumber:Number,
 })
 
-const member = mongoose.model('book',memberSchema)
+const Member = mongoose.model('member',memberSchema)
 
-module.exports = member;
+module.exports = Member;
